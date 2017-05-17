@@ -2,6 +2,7 @@ package ch.hslu.mobsys.protocol;
 
 import com.sun.javafx.collections.ObservableListWrapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,6 +19,10 @@ public class FixedSizeList extends ObservableListWrapper<MulticastMessage>  {
     //</editor-fold>
 
     //<editor-fold desc="Constructors">
+    public FixedSizeList(){
+        this(new ArrayList<>());
+
+    }
     public FixedSizeList(List<MulticastMessage> list, int size) {
         super(list);
         this.size = size;
